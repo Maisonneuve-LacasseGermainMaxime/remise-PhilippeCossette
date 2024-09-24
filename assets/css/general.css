@@ -1,0 +1,45 @@
+@import url(aboutStyle.css);
+@import url(formStyle.css);
+@import url(home.css);
+@import url(composante/theme.css);
+@import url(composante/scrollEffect.css);
+@import url(confirmedPage.css);
+
+@import url(navigation.css);
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+[data-theme="dark"] {
+  --background-color: rgb(51, 51, 51);
+  --navigation-background: rgb(85, 85, 85);
+  --font-color: rgb(255, 255, 255);
+}
+
+[data-theme="light"] {
+  --background-color: rgb(255, 255, 255);
+  --navigation-background: rgb(255, 255, 255);
+  --font-color: rgb(0, 0, 0);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--font-color);
+
+  transition: all 0.5s linear;
+
+  & nav {
+    background-color: var(--navigation-background);
+
+    transition: all 0.5s linear;
+
+    & a {
+      color: var(--font-color);
+      transition: all 0.5s linear;
+    }
+  }
+}

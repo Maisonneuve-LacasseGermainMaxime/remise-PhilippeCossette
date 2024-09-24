@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uwon - Form</title>
+    <link rel="stylesheet" href="assets/css/general.css" />
+    <script src="assets/js/formScript.js" type="module"></script>
+  </head>
+  <body data-theme="light">
+    <nav>
+      <div class="link">
+        <img class="logo" src="assets/img/uwon-logo.png" alt="" />
+      </div>
+      <div class="theme">
+        <div class="button-theme light hideButton" data-mode="light">
+          <p>Light Theme</p>
+          <img src="assets/imageContent/sun.png" alt="" />
+        </div>
+        <div class="button-theme dark" data-mode="dark">
+          <p>Dark Theme</p>
+          <img src="assets/imageContent/full-moon.png" alt="" />
+        </div>
+      </div>
+    </nav>
+    <div class="form__center">
+      <form action="confirmed.html" class="form">
+        <h1>Purchase Validation</h1>
+        <section class="form__info__user" data-page="1">
+          <h2>Step 1- Personal Informations</h2>
+          <div class="form__container">
+            <div class="info__section">
+              <div class="input">
+                <label for="name">Full Name*</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  maxlength="50"
+                  minlength="”3″"
+                  required
+                />
+                <p class="error hideElement">
+                  Invalid name, it needs to be between 5 and 50 characters long.
+                </p>
+              </div>
+              <div class="input">
+                <label for="mail">Email*</label>
+                <input type="email" id="mail" name="mail" required />
+                <p class="error hideElement">Invalid E-mail</p>
+              </div>
+              <div class="input">
+                <label for="tel">Phone Number* (123)456-7890</label>
+                <input
+                  type="tel"
+                  id="tel"
+                  name="tel"
+                  required
+                  pattern="^\(?([0-9]{3})\)?[.\-\s]?([0-9]{3})[.\-\s]?([0-9]{4})$"
+                />
+                <p class="error hideElement">
+                  Invalid phone number, please follow the format given.
+                </p>
+              </div>
+            </div>
+            <div class="info__section">
+              <div class="input">
+                <label for="adress">Adress*</label>
+                <input type="text" id="adress" name="adress" required />
+                <p class="error hideElement">Invalid adress</p>
+              </div>
+              <div class="input">
+                <label for="city">City*</label>
+                <input
+                  type="text"
+                  id="city"
+                  name="city"
+                  minlength="3"
+                  maxlength="40"
+                  required
+                />
+                <p class="error hideElement">
+                  Invalid city, it needs to be between 3 and 40 characters long.
+                </p>
+              </div>
+              <div class="input">
+                <label for="postal">Postal Code* (A1B 2C3)</label>
+                <input
+                  type="text"
+                  id="postal"
+                  name="postal"
+                  required
+                  pattern="([A-z][0-9][A-z])\s?([0-9][A-z][0-9])"
+                />
+                <p class="error hideElement">
+                  Invalid postal code, please follow format given.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="button__container">
+            <div class="button-next disabled" data-direction="1">
+              Next &rarr;
+            </div>
+          </div>
+        </section>
+        <section class="form__info__order" data-page="2">
+          <h2>Step 2- Order Informations</h2>
+          <div class="form__container__shipping">
+            <div class="shipping__store">
+              <label for="store">In Store Pickup</label>
+              <div>
+                <input type="checkbox" id="store" name="storechecked" />
+                <select name="storeselected" id="storeselected" required>
+                  <option value="" selected disabled hidden>
+                    Choose your store
+                  </option>
+                  <option value="Montreal Store">Montreal</option>
+                  <option value="Quebec Store">Quebec</option>
+                  <option value="Trois-Rivieres Store">Trois-Rivieres</option>
+                  <option value="Shawinigan Store">Shawinigan</option>
+                  <option value="Blainville Store">Blainville</option>
+                  <option value="Toronto Store">Toronto</option>
+                  <option value="Ottawa Store">Ottawa</option>
+                </select>
+              </div>
+            </div>
+            <div class="date">
+              <label for="date" class="dateLabel">Shipping Date*</label>
+              <input type="date" id="date" name="date" required />
+            </div>
+            <div class="shipping__services">
+              <p>Shipping Services</p>
+              <div>
+                <div class="radio__container">
+                  <input
+                    type="radio"
+                    id="postecanada"
+                    name="delivery"
+                    value="Post Canada"
+                    required
+                  />
+                  <label for="postecanada">Poste Canada</label>
+                </div>
+                <div class="radio__container">
+                  <input
+                    type="radio"
+                    id="fedex"
+                    name="delivery"
+                    value="FedEx"
+                    required
+                  />
+                  <label for="fedex">Fedex</label>
+                </div>
+                <div class="radio__container">
+                  <input
+                    type="radio"
+                    id="ups"
+                    name="delivery"
+                    value="UPS"
+                    required
+                  />
+                  <label for="ups">UPS</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="button__container">
+            <div class="button-back" data-direction="-1">&larr; Back</div>
+            <div class="button-next disabled" data-direction="1">
+              Next &rarr;
+            </div>
+          </div>
+        </section>
+        <section class="resume" data-page="3">
+          <h2>Step 3- Resume</h2>
+          <div class="textResume">
+            <div class="personalInfo">
+              <h3>Personal Informations</h3>
+              <p data-name="name" class="name"></p>
+              <p data-name="mail"></p>
+              <p data-name="tel"></p>
+            </div>
+            <div class="adress">
+              <h3>Adress</h3>
+              <p data-name="adress"></p>
+              <p data-name="city"></p>
+              <p data-name="postal"></p>
+            </div>
+            <div class="shipping-pickup">
+              <h3 class="shippingType">Shipping</h3>
+              <p data-name="date"></p>
+              <p class="delivery" data-name="delivery"></p>
+              <p data-name="postal"></p>
+            </div>
+          </div>
+          <div class="button__container">
+            <div class="button-back" data-direction="-1">&larr; Back</div>
+            <div class="button-submit" data-direction="1">Confirm</div>
+          </div>
+        </section>
+      </form>
+    </div>
+  </body>
+</html>

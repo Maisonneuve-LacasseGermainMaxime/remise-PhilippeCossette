@@ -1,0 +1,90 @@
+.carousel {
+  display: flex;
+  flex-direction: column;
+
+  width: 70%;
+  margin: auto;
+  margin-top: 60px;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.image {
+  max-width: 80%;
+  border-radius: 10px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 15px;
+}
+
+.button img {
+  max-width: 60px;
+  transition: transform 0.2s linear;
+  cursor: pointer;
+}
+
+.button img:hover {
+  transform: scale(1.09);
+}
+
+.slide-mid-to-left {
+  animation: slide-mid-to-left 0.3s ease forwards;
+}
+
+@keyframes slide-mid-to-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-150%);
+  }
+}
+
+.slide-right-to-mid {
+  animation: slide-right-to-mid 0.5s ease forwards;
+}
+
+@keyframes slide-right-to-mid {
+  0% {
+    transform: translateX(150%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slide-mid-to-right {
+  animation: slide-mid-to-right 0.3s ease forwards;
+}
+
+@keyframes slide-mid-to-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(150%);
+  }
+}
+
+.slide-left-to-mid {
+  animation: slide-left-to-mid 0.5s ease forwards;
+}
+
+@keyframes slide-left-to-mid {
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

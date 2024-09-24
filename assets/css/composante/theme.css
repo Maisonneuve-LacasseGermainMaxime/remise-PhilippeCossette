@@ -1,0 +1,65 @@
+.theme {
+  position: relative;
+}
+
+.button-theme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 15ch;
+
+  font-family: "Noto Sans";
+  font-size: 18px;
+  font-weight: 500;
+  border: 1px solid rgba(0, 0, 0, 0.507);
+  padding: 8px;
+  padding-inline: 12px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  transition: scale 0.2s ease-in;
+
+  & img {
+    max-width: 30px;
+  }
+}
+
+.button-theme:hover {
+  scale: 1.02;
+}
+
+.light {
+  background-color: white;
+  color: black;
+}
+
+.dark {
+  background-color: rgb(71, 71, 71);
+  color: white;
+}
+
+.hideButton {
+  position: absolute;
+  top: -220%;
+}
+
+.showHiddenButton {
+  animation: dropButton 0.8s ease forwards;
+  z-index: 999;
+}
+
+@keyframes dropButton {
+  0% {
+    top: -220%;
+  }
+  20% {
+    top: 0;
+  }
+  40% {
+    top: -30%;
+  }
+  100% {
+    top: 0;
+  }
+}

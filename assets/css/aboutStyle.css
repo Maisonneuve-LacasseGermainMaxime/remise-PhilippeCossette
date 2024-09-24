@@ -1,0 +1,37 @@
+@import url(./composante/newsletter.css);
+@import url(./navigation.css);
+@import url(./composante/carousel.css);
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin-inline: 40px;
+  margin-block: 60;
+}
+
+.content {
+  margin-block: 60px;
+
+  & h1 {
+    font-family: "Noto Sans";
+    font-size: 32px;
+  }
+
+  & p {
+    font-family: "Noto Sans";
+    font-size: 24px;
+    text-align: justify;
+  }
+}
+
+.animationHide {
+  opacity: 0;
+}
+
+.noDisplay {
+  display: none;
+}

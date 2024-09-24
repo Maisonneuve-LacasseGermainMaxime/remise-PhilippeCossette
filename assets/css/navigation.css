@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 50px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 6px 8px;
+  max-width: 100%;
+
+  z-index: 999;
+
+  & a {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: right;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.781);
+    padding-block: 20px;
+    padding-inline: 15px;
+    background: linear-gradient(
+      to right,
+      #fa9f17 0%,
+      #fa9f17 50%,
+      #fa9f17 100%
+    );
+    background-position: 0 70%;
+    background-size: 0% 1px;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s, background-position 0s 0.3s;
+
+    &:hover {
+      background-position: 100% 70%;
+      background-size: 100% 1px;
+      color: #fa9f17;
+    }
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.logo {
+  max-width: 70px;
+}
+
+.current {
+  color: #fa9f17;
+}
