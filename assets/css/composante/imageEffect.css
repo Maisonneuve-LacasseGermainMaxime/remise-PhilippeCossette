@@ -1,0 +1,28 @@
+
+
+.showImageAnimation {
+    animation: ScaleIn 1s ease-in-out forwards;
+    
+}
+
+@keyframes ScaleIn {
+    0% {
+        transform: scale(0.001);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.hideImageAnimation {
+    animation: ScaleOut 1s ease-in-out forwards;
+}
+
+@keyframes ScaleOut {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.001);
+    }
+}

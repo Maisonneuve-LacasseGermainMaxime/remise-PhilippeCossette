@@ -31,7 +31,6 @@ function importNavigation(tabNav) {
     link = link.replaceAll(" ", "");
     link = link.toLowerCase();
     link = `${link}.html`;
-    console.log(link);
     if (document.URL.includes(link)) {
       navContainer.insertAdjacentHTML(
         "beforeend",
@@ -45,7 +44,3 @@ function importNavigation(tabNav) {
     }
   }
 }
-
-//Execution
-
-// Execution of function init

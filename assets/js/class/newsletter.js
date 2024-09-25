@@ -6,12 +6,13 @@ class Newsletter {
     if (localStorage.getItem(this.popupName) == "true") {
       this.containerHTML.classList.add("noDisplay");
     } else {
-      setInterval(this.showPopup.bind(this), 50000);
+      setTimeout(this.showPopup.bind(this), 5000);
     }
 
     this.containerHTML.addEventListener("click", this.closePopup.bind(this));
   }
 
+  //function shows popup if localstorage isnt true
   showPopup() {
     let opened = localStorage.getItem(this.popupName);
     if (opened == "false" || opened == null) {
@@ -28,6 +29,7 @@ class Newsletter {
     }
   }
 
+  //function that closes the popup when clicking
   closePopup(event) {
     let target = event.target;
 
@@ -36,7 +38,6 @@ class Newsletter {
     if (exitButton != null) {
       this.containerHTML.classList.remove("withOpacity");
       this.containerHTML.classList.add("animationHide");
-      console.log("dasda");
 
       this.containerHTML.addEventListener(
         "transitionend",

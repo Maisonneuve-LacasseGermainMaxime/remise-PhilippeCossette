@@ -6,6 +6,7 @@ let buttonLight = document.querySelector("[data-mode='light']");
 buttonLight.addEventListener("click", lightTheme);
 buttonDark.addEventListener("click", darkTheme);
 
+// change to light color
 function lightTheme() {
   localStorage.setItem("theme", buttonLight.dataset.mode);
   body.dataset.theme = buttonLight.dataset.mode;
@@ -19,6 +20,7 @@ function lightTheme() {
   });
 }
 
+// change to dark color
 function darkTheme() {
   localStorage.setItem("theme", buttonDark.dataset.mode);
   body.dataset.theme = buttonDark.dataset.mode;
@@ -32,6 +34,7 @@ function darkTheme() {
   });
 }
 
+// function checked if localstorage true or false
 function checkLocalStorage() {
   if (localStorage.getItem("theme") == "light") {
     lightTheme();

@@ -1,6 +1,6 @@
 @import url(./composante/newsletter.css);
-@import url(./navigation.css);
 @import url(./composante/carousel.css);
+@import url(./composante/imageEffect.css);
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 body {
@@ -13,19 +13,37 @@ main {
   margin-block: 60;
 }
 
+.img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .content {
   margin-block: 60px;
-
-  & h1 {
-    font-family: "Noto Sans";
-    font-size: 32px;
-  }
 
   & p {
     font-family: "Noto Sans";
     font-size: 24px;
     text-align: justify;
   }
+}
+
+h1 {
+  font-family: "Noto Sans";
+  font-size: 32px;
+  margin-top: 30px;
+}
+
+.about-title {
+  text-align: center;
+  font-size: 40px;
+}
+
+[data-animate] {
+  max-width: 800px;
+  flex-grow: 1;
+  margin-top: 20px;
 }
 
 .animationHide {

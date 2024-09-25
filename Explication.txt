@@ -1,0 +1,18 @@
+Fonctionnalités de la page À propos :
+
+Ajout d'animations sur les liens de navigation.
+Petite animation "Bounce" sur le bouton pour changer le thème de la page.
+Carrousel qui défile automatiquement selon un délai ou avec des boutons.
+Ajout d'animations "onScroll" pour les sections et les images.
+La "Newsletter" qui s'affiche après 5000 ms si la validation est réussie.
+Pour le design, j'ai voulu garder le site le plus simple possible tout en ajoutant une couleur d'accent avec une typographie simple et claire. Pour le bouton du thème, j'ai ajouté une lune et un soleil, ce qui me semble approprié.
+
+Pour l'organisation des fichiers, j'ai simplement créé un dossier 'assets' avec des sous-dossiers comme 'js', 'css', et 'img'. De plus, j'ai utilisé des fichiers de module, de classe ou de composant pour les fichiers nécessaires. Ensuite, j'ai créé un fichier contenant tous les imports requis.
+
+Concernant la structure du code, j'ai créé des fonctions selon mes besoins et des classes lorsque c'était nécessaire, comme pour le carrousel et la newsletter.
+
+Difficultés :
+
+Bien comprendre les animations. Je comprends assez bien, mais parfois cela devient confus. Savoir quand ajouter la classe et quand la retirer peut être déroutant.
+De plus, le fait d'avoir travaillé sur plusieurs TP a parfois rendu l'apprentissage de nouvelles matières difficile, et j'aurais aimé intégrer cela dans mon ancien code, mais bon, c'est la vie.
+Merci, Maxime, pour la belle session !

@@ -85,7 +85,6 @@ class Carousel {
   onClick(event) {
     let target = event.target;
     let button = target.closest("[data-direction]");
-    console.log("test");
 
     if (button != null) {
       clearInterval(this.interval);

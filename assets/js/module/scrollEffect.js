@@ -1,8 +1,6 @@
 let sections = document.querySelectorAll("section");
 let zone = null;
 
-console.log(sections);
-
 export function init() {
   const options = {
     root: zone,
@@ -11,7 +9,7 @@ export function init() {
   };
 
   let observer = new IntersectionObserver(onIntersection, options);
-
+  //Add Observer on each sections
   sections.forEach(function (section) {
     observer.observe(section);
   });
@@ -22,6 +20,7 @@ function onIntersection(entries) {
     let element = entry.target;
     let intersect = entry.isIntersecting;
 
+     //if intersercting manage class for animation
     if (intersect == true) {
       element.classList.remove("noOpacity");
       element.classList.add("withOpacity");

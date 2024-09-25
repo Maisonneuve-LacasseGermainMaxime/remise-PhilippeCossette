@@ -3,11 +3,13 @@ import Carousel from "./class/Carousel.js";
 import Newsletter from "./class/newsletter.js";
 import { init as initTheme } from "./module/darkmode.js";
 import { init as initScrollEffect } from "./module/scrollEffect.js";
+import { init as initImageEffect } from "./module/imageEffect.js";
 
 function init() {
   initNavigation();
   initTheme();
   initScrollEffect();
+  initImageEffect();
 }
 
 let imgTab = [
@@ -19,6 +21,7 @@ let imgTab = [
 ];
 let carouselContainer = document.querySelector(".carousel");
 
+// Call a new carousel
 let bannerCarousel = new Carousel(imgTab, carouselContainer);
 
 let popupName = "newsletter";
